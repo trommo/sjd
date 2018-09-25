@@ -5,7 +5,7 @@ import info.sjd.AbstractShape;
 public class Triangle extends AbstractShape {
 
 	private float aSide, bSide, cSide;
-	private float halfPerimeter = (aSide + bSide + cSide) / 2;
+	private float halfPerimeter = (float) ((aSide + bSide + cSide) * 0.5);
 	
 	public float getaSide() {
 		return aSide;
