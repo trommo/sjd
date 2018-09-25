@@ -13,7 +13,7 @@ public class AppRunner {
 	
 	public static void main(String[] args) {
 		
-		// Founding Square Area
+		// Finding Square Area
 		
 		Square square1 = new Square();
 		square1.setSide(15);
@@ -27,7 +27,7 @@ public class AppRunner {
 		square3.setSide(115);
 		logger.info("Square with side " + square3.getSide() + " has area " + square3.getArea());
 		
-		// Founding Circle Area
+		// Finding Circle Area
 		
 		Circle circle1 = new Circle();
 		circle1.setRadius(15);
@@ -41,7 +41,7 @@ public class AppRunner {
 		circle3.setRadius(115);
 		logger.info("Circle with radius " + circle3.getRadius() + " has area " + circle3.getArea());
 		
-		// Founding Rectangle Area		
+		// Finding Rectangle Area		
 
 		Rectangle rectangle11 = new Rectangle();
 		rectangle11.setWidth(15);
@@ -54,7 +54,7 @@ public class AppRunner {
 		rectangle12.setHeight(33);
 		logger.info("Rectangle with width=" + rectangle12.getWidth() + " and height=" + rectangle12.getHeight() + " has area " + rectangle12.getArea());
 		
-		// Founding Triangle Area
+		// Finding Triangle Area
 		
 		Triangle triangle11 = new Triangle();
 		triangle11.setaSide(3);
