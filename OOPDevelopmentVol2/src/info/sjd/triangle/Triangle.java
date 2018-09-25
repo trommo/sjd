@@ -4,30 +4,30 @@ import info.sjd.AbstractShape;
 
 public class Triangle extends AbstractShape {
 
-	private int aSide, bSide, cSide;
-	private float halfPerimeter = (float) (aSide + bSide + cSide) / 2;
+	private float aSide, bSide, cSide;
+	private float halfPerimeter = (aSide + bSide + cSide) / 2;
 	
-	public int getaSide() {
+	public float getaSide() {
 		return aSide;
 	}
 
-	public void setaSide(int aSide) {
+	public void setaSide(float aSide) {
 		this.aSide = aSide;
 	}
 
-	public int getbSide() {
+	public float getbSide() {
 		return bSide;
 	}
 
-	public void setbSide(int bSide) {
+	public void setbSide(float bSide) {
 		this.bSide = bSide;
 	}
 
-	public int getcSide() {
+	public float getcSide() {
 		return cSide;
 	}
 
-	public void setcSide(int cSide) {
+	public void setcSide(float cSide) {
 		this.cSide = cSide;
 	}
 
@@ -35,7 +35,7 @@ public class Triangle extends AbstractShape {
 		return halfPerimeter;
 	}
 
-	public void setHalfPerimeter(int halfPerimeter) {
+	public void setHalfPerimeter(float halfPerimeter) {
 		this.halfPerimeter = halfPerimeter;
 	}
 	

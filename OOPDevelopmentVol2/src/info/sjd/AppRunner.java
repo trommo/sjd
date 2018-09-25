@@ -44,20 +44,35 @@ public class AppRunner {
 		// Founding Rectangle Area		
 
 		Rectangle rectangle11 = new Rectangle();
-		Rectangle rectangle12 = new Rectangle();
 		rectangle11.setWidth(15);
-		rectangle12.setHeight(20);
-		logger.info("Rectangle with width=" + rectangle11.getWidth() + " and height=" + rectangle12.getHeight() + " has area " + (rectangle11).getArea());
+		rectangle11.setHeight(20);
+		logger.info("Rectangle with width=" + rectangle11.getWidth() + " and height=" + rectangle11.getHeight() + " has area " + rectangle11.getArea());
+
+		
+		Rectangle rectangle12 = new Rectangle();
+		rectangle12.setWidth(25);
+		rectangle12.setHeight(33);
+		logger.info("Rectangle with width=" + rectangle12.getWidth() + " and height=" + rectangle12.getHeight() + " has area " + rectangle12.getArea());
 		
 		// Founding Triangle Area
 		
 		Triangle triangle11 = new Triangle();
+		triangle11.setaSide(3);
+		triangle11.setbSide(4);
+		triangle11.setcSide(5);
+		logger.info("Triangle with a side=" + triangle11.getaSide() + ", b side=" + triangle11.getbSide() + " and c side=" + triangle11.getcSide() + " has area " + triangle11.getArea());
+
 		Triangle triangle12 = new Triangle();
+		triangle12.setaSide(13);
+		triangle12.setbSide(14);
+		triangle12.setcSide(15);
+		logger.info("Triangle with a side=" + triangle12.getaSide() + ", b side=" + triangle12.getbSide() + " and c side=" + triangle12.getcSide() + " has area " + triangle12.getArea());
+
 		Triangle triangle13 = new Triangle();
-		triangle11.setaSide(15);
-		triangle12.setbSide(20);
-		triangle13.setcSide(115);
-		logger.info("Triangle with a side=" + triangle11.getaSide() + ", b side=" + triangle12.getbSide() + " and c side=" + triangle13.getcSide() + " has area " + (triangle11).getArea());
+		triangle13.setaSide(10);
+		triangle13.setbSide(11);
+		triangle13.setcSide(12);
+		logger.info("Triangle with a side=" + triangle13.getaSide() + ", b side=" + triangle13.getbSide() + " and c side=" + triangle13.getcSide() + " has area " + triangle13.getArea());
 
 	}
 
