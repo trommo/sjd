@@ -6,6 +6,7 @@ import info.sjd.circle.Circle;
 import info.sjd.rectangle.Rectangle;
 import info.sjd.square.Square;
 import info.sjd.triangle.Triangle;
+import info.sjd.triangle2.Triangle2;
 
 public class AppRunner {
 	
@@ -54,7 +55,7 @@ public class AppRunner {
 		rectangle12.setHeight(33);
 		logger.info("Rectangle with width=" + rectangle12.getWidth() + " and height=" + rectangle12.getHeight() + " has area " + rectangle12.getArea());
 		
-		// Finding Triangle Area
+		// Finding Triangle Area through three sides
 		
 		Triangle triangle11 = new Triangle();
 		triangle11.setaSide(3);
@@ -74,6 +75,17 @@ public class AppRunner {
 		triangle13.setcSide(12);
 		logger.info("Triangle with a side=" + triangle13.getaSide() + ", b side=" + triangle13.getbSide() + " and c side=" + triangle13.getcSide() + " has area " + triangle13.getArea());
 
+		// Finding Triangle Area through its base and height
+		
+		Triangle2 triangle21 = new Triangle2();
+		triangle21.setBase(10);
+		triangle21.setHeight(5);
+		logger.info("Triangle with base=" + triangle21.getBase() + "and height=" + triangle21.getHeight() + " has area=" + triangle21.getArea());
+		
+		Triangle2 triangle22 = new Triangle2();
+		triangle22.setBase(13);
+		triangle22.setHeight(7);
+		logger.info("Triangle with base=" + triangle22.getBase() + "and height=" + triangle22.getHeight() + " has area=" + triangle22.getArea());
 	}
 
 }
