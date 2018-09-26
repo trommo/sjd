@@ -5,7 +5,6 @@ import info.sjd.AbstractShape;
 public class Triangle extends AbstractShape {
 
 	private float aSide, bSide, cSide;
-	private float halfPerimeter = (float) ((aSide + bSide + cSide) * 0.5);
 	
 	public float getaSide() {
 		return aSide;
@@ -32,16 +31,12 @@ public class Triangle extends AbstractShape {
 	}
 
 	public float getHalfPerimeter() {
-		return halfPerimeter;
+	    return (float) ((aSide + bSide + cSide) * 0.5);
 	}
 
-	public void setHalfPerimeter(float halfPerimeter) {
-		this.halfPerimeter = halfPerimeter;
-	}
-	
 		@Override
 	public float getArea() {
-		return (float) Math.sqrt(halfPerimeter * (halfPerimeter - aSide) * (halfPerimeter - bSide) * (halfPerimeter - cSide));
+		return (float) Math.sqrt(getHalfPerimeter() * (getHalfPerimeter() - aSide) * (getHalfPerimeter() - bSide) * (getHalfPerimeter() - cSide));
 	}
 
 }
