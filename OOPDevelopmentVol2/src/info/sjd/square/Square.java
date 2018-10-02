@@ -15,7 +15,7 @@ public class Square extends AbstractShape {
 	}
 
 	@Override
-	public float getArea() {
+	public double getArea() {
 		return side * side;
 	}
 

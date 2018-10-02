@@ -23,9 +23,9 @@ public class Triangle2 extends AbstractShape {
 	}
 
 	@Override
-	public float getArea() {
+	public double getArea() {
 		// TODO Auto-generated method stub
-		return (float) ((float) base * height * 0.5);
+		return (double) ((double) base * height * 0.5);
 	}
 
 }

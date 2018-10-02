@@ -31,7 +31,7 @@ public class AppRunner {
 		// Finding Circle Area
 		
 		Circle circle1 = new Circle();
-		circle1.setRadius(15);
+		circle1.setRadius(1);
 		logger.info("Circle with radius " + circle1.getRadius() + " has area " + circle1.getArea());
 
 		Circle circle2 = new Circle();

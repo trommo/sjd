@@ -23,8 +23,8 @@ public class Rectangle extends AbstractShape {
 	}
 
 	@Override
-	public float getArea() {
-		return (float) width * height;
+	public double getArea() {
+		return (double) width * height;
 	}
 
 }
