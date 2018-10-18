@@ -1,6 +1,9 @@
 package info.sjd;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -41,7 +44,7 @@ public class AppRunnerCollection {
 		// logger.info("Circle with radius " + circle2.getRadius() + " has area " + circle2.getArea());
 		
 		Circle circle3 = new Circle();
-		circle3.setRadius(115);
+		circle3.setRadius(55);
 		// logger.info("Circle with radius " + circle3.getRadius() + " has area " + circle3.getArea());
 		
 		// Finding Rectangle Area		
@@ -106,11 +109,37 @@ public class AppRunnerCollection {
 		shapes.add(triangle21);
 		shapes.add(triangle22);
 		
-		logger.info("Our collection contains the following elements:");
+		logger.info("Our collection contains the following elements: ");
 		
 		for (Shape shape : shapes) {
-			logger.info(shape.getClass().getSimpleName() + " " + shape.toString());
+			logger.info("The object belongs to the type " + shape.getClass().getSimpleName() + " and its square equals to " + shape.toString());
 		}
+		
+		// Finding the minimal and maximal elements of collection
+		
+		Shape maxElement = null, minElement = null;
+		
+		if (!shapes.isEmpty()) {
+			maxElement = shapes.get(0);
+			minElement = shapes.get(0);
+		}
+		
+		for (int i = 1; i < shapes.size(); i++) {
+			if (maxElement.getArea() < shapes.get(i).getArea()) {
+				maxElement = shapes.get(i);
+			}
+			
+			if (minElement.getArea() > shapes.get(i).getArea()) {
+				minElement = shapes.get(i);
+			}
+				
+		}
+		
+		logger.info("The minimal square object is " + minElement.getClass().getSimpleName() + ", its square equals to " + minElement.toString() + ".\n\t The maximum square object is " + maxElement.getClass().getSimpleName() + ", its square equals to " + maxElement.toString() + ".");
+		
+
+		
+		
 	}
 
 }
