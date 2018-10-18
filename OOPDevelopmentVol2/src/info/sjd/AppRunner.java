@@ -1,5 +1,7 @@
 package info.sjd;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Logger;
 
 import info.sjd.circle.Circle;
@@ -86,6 +88,25 @@ public class AppRunner {
 		triangle22.setBase(13);
 		triangle22.setHeight(7);
 		logger.info("Triangle with base=" + triangle22.getBase() + "and height=" + triangle22.getHeight() + " has area=" + triangle22.getArea());
+		
+		// Creating collection
+		
+		List<Shape> shapes = new ArrayList<>();
+		shapes.add(square1);
+		shapes.add(square2);
+		shapes.add(square3);
+		shapes.add(circle1);
+		shapes.add(circle2);
+		shapes.add(circle3);
+		shapes.add(rectangle11);
+		shapes.add(rectangle12);
+		shapes.add(triangle11);
+		shapes.add(triangle12);
+		shapes.add(triangle13);
+		shapes.add(triangle21);
+		shapes.add(triangle22);
+		
+		logger.info("Our collection contains the following elements: " + shapes);
 	}
 
 }

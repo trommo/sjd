@@ -38,5 +38,9 @@ public class Triangle extends AbstractShape {
 	public double getArea() {
 		return (double) Math.sqrt(getHalfPerimeter() * (getHalfPerimeter() - aSide) * (getHalfPerimeter() - bSide) * (getHalfPerimeter() - cSide));
 	}
+		
+	public String toString() {
+		return String.valueOf(Math.sqrt(getHalfPerimeter() * (getHalfPerimeter() - aSide) * (getHalfPerimeter() - bSide) * (getHalfPerimeter() - cSide)));
+	}	
 
 }

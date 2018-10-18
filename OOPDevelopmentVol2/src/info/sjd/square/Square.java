@@ -18,5 +18,9 @@ public class Square extends AbstractShape {
 	public double getArea() {
 		return side * side;
 	}
+	
+	public String toString() {
+		return String.valueOf(side * side);
+	}
 
 }

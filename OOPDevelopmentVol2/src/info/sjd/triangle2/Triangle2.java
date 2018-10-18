@@ -28,4 +28,7 @@ public class Triangle2 extends AbstractShape {
 		return (double) ((double) base * height * 0.5);
 	}
 
+	public String toString() {
+		return String.valueOf(base * height * 0.5);
+	}
 }

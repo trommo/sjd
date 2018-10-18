@@ -27,4 +27,7 @@ public class Rectangle extends AbstractShape {
 		return (double) width * height;
 	}
 
+	public String toString() {
+		return String.valueOf(width * height);
+	}
 }

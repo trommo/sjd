@@ -18,4 +18,8 @@ public class Circle extends AbstractShape {
 	public double getArea() {
 		return (double) (Math.PI*radius*radius);
 	}
+	
+	public String toString() {
+		return String.valueOf(Math.PI*radius*radius);
+	}
 }
