@@ -73,7 +73,6 @@ public class AppRunnerCollection {
 		Triangle2 triangle21 = new Triangle2();
 		triangle21.setBase(10);
 		triangle21.setHeight(5);
-		// logger.info("Triangle with base=" + triangle21.getBase() + "and height=" + triangle21.getHeight() + " has area=" + triangle21.getArea());
 		
 		Triangle2 triangle22 = new Triangle2();
 		triangle22.setBase(13);
@@ -104,29 +103,17 @@ public class AppRunnerCollection {
 		
 		// Finding the minimal and maximal elements of collection
 		
-		Shape maxElement = null, minElement = null;
+		ShapeService shapeService = new ShapeService();
 		
-		if (!shapes.isEmpty()) {
-			maxElement = shapes.get(0);
-			minElement = shapes.get(0);
+		Shape maxElement = shapeService.getMaxSquare(shapes);
+		Shape minElement = shapeService.getMinSquare(shapes);
+		
+		if (minElement != null) {
+			logger.info("The minimal square object is " + minElement.getClass().getSimpleName() + ", its square equals to " + minElement.toString() + ".");
 		}
-		
-		for (int i = 1; i < shapes.size(); i++) {
-			if (maxElement.getArea() < shapes.get(i).getArea()) {
-				maxElement = shapes.get(i);
-			}
-			
-			if (minElement.getArea() > shapes.get(i).getArea()) {
-				minElement = shapes.get(i);
-			}
-				
-		}
-		
-		logger.info("The minimal square object is " + minElement.getClass().getSimpleName() + ", its square equals to " + minElement.toString() + ".\n\t The maximum square object is " + maxElement.getClass().getSimpleName() + ", its square equals to " + maxElement.toString() + ".");
-		
 
-		
-		
+		if (maxElement != null) {
+			logger.info("The maximum square object is " + maxElement.getClass().getSimpleName() + ", its square equals to " + maxElement.toString() + ".");
+		}
 	}
-
 }
