@@ -12,8 +12,6 @@ import info.sjd.triangle2.Triangle2;
 
 public class ShapeService {
 		
-	// Finding an element of collection with maximal square
-	
 	public static Shape getMaxSquareShape(List<Shape> shapes) {
 		if (shapes.isEmpty()) {
 			return null;
@@ -28,8 +26,6 @@ public class ShapeService {
 		}
 		return maxElement;
 	}
-	
-	// Finding an element of collection with minimal square
 	
 	public static Shape getMinSquareShape(List<Shape> shapes) {
 		if (shapes.isEmpty()) {
@@ -47,7 +43,6 @@ public class ShapeService {
 	}
 
 	public static List<Shape> getRandomShapeList() {
-		// Finding Square Area
 		
 				Square square1 = new Square();
 				square1.setSide(15);
@@ -58,8 +53,6 @@ public class ShapeService {
 				Square square3 = new Square();
 				square3.setSide(115);
 				
-				// Finding Circle Area
-				
 				Circle circle1 = new Circle();
 				circle1.setRadius(1);
 
@@ -69,8 +62,6 @@ public class ShapeService {
 				Circle circle3 = new Circle();
 				circle3.setRadius(55);
 				
-				// Finding Rectangle Area		
-
 				Rectangle rectangle11 = new Rectangle();
 				rectangle11.setWidth(15);
 				rectangle11.setHeight(20);
@@ -78,8 +69,6 @@ public class ShapeService {
 				Rectangle rectangle12 = new Rectangle();
 				rectangle12.setWidth(25);
 				rectangle12.setHeight(33);
-				
-				// Finding Triangle Area through three sides
 				
 				Triangle triangle11 = new Triangle();
 				triangle11.setaSide(3);
@@ -96,8 +85,6 @@ public class ShapeService {
 				triangle13.setbSide(11);
 				triangle13.setcSide(12);
 
-				// Finding Triangle Area through its base and height
-				
 				Triangle2 triangle21 = new Triangle2();
 				triangle21.setBase(10);
 				triangle21.setHeight(5);
@@ -105,8 +92,6 @@ public class ShapeService {
 				Triangle2 triangle22 = new Triangle2();
 				triangle22.setBase(13);
 				triangle22.setHeight(7);
-				
-				// Creating collection
 				
 				List<Shape> shapes = new ArrayList<>();
 				shapes.add(square1);
