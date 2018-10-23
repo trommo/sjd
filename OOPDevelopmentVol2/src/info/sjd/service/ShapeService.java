@@ -94,6 +94,7 @@ public class ShapeService {
 				triangle22.setHeight(7);
 				
 				List<Shape> shapes = new ArrayList<>();
+				
 				shapes.add(square1);
 				shapes.add(square2);
 				shapes.add(square3);
