@@ -11,7 +11,7 @@ public class AppRunner {
 	private static Logger logger = Logger.getLogger(AppRunner.class.getName()); 
 
 	public static void main(String[] args) {
-		List<Product> products = ProductService.getListOfProducts();
+		List<Product> products = ProductService.getListOfProducts(1000, 10000);
 		
 		logger.info("List of products contains " + products.size() + " palindromes. \tHere it is: " + products.toString() + ".");
 		

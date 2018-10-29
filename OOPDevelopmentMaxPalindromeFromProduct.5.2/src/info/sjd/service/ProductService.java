@@ -24,9 +24,7 @@ public class ProductService {
 		return true;
 	}
 	
-	public static List<Product> getListOfProducts() {
-		int minLimit = 1000;
-		int maxLimit = 10000;
+	public static List<Product> getListOfProducts(int minLimit, int maxLimit) {
 		List<Product> products = new ArrayList<>();
 		for (int i = minLimit; i < maxLimit; i++) {
 			for (int j = minLimit; j < maxLimit; j++) {

@@ -1,7 +1,10 @@
 import static org.junit.Assert.*;
 
+import java.util.List;
+
 import org.junit.Test;
 
+import info.sjd.Product;
 import info.sjd.service.ProductService;
 
 public class ProductServiceTest {
@@ -16,12 +19,16 @@ public class ProductServiceTest {
 	
 	@Test
 	public final void testGetListOfProducts() {
-		fail("Not yet implemented"); // TODO
+		assertNotNull(ProductService.getListOfProducts(100, 1000));
+		assertTrue(!ProductService.getListOfProducts(100, 1000).isEmpty());
 	}
 
 	@Test
 	public final void testGetMaxNumber() {
-		fail("Not yet implemented"); // TODO
+		List<Product> products = ProductService.getListOfProducts(100, 1000);
+		
+		Product maxElement = ProductService.getMaxNumber(products);
+		assertEquals("906609", maxElement.toString());
 	}
 
 
