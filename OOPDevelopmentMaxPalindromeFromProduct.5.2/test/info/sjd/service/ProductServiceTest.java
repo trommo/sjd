@@ -28,7 +28,7 @@ public class ProductServiceTest {
 		List<Product> products = ProductService.getListOfProducts(100, 1000);
 		
 		Product maxElement = ProductService.getMaxNumber(products);
-		assertEquals("906609", maxElement.toString());
+		assertEquals(906609, Integer.parseInt(maxElement.toString()));
 	}
 
 
