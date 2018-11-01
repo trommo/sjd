@@ -8,9 +8,4 @@ public class LongMultiplication {
 
 		LongMultiplicationService.printLongMultiplication(1234, 123);
 	}
-
-
-
-
-
 }
