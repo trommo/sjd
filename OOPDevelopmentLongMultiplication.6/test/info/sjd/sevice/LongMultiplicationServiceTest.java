@@ -26,7 +26,7 @@ public class LongMultiplicationServiceTest {
 	public final void testRepeatNSymbols() {
 		int testNumber = 15;
 		String testSymbol = "*";
-		assertEquals("***************", LongMultiplicationService.repeatNSymbols(testNumber, testSymbol););
+		assertEquals("***************", LongMultiplicationService.repeatNSymbols(testNumber, testSymbol));
 	}
 
 	@Test
