@@ -30,11 +30,6 @@ public class LongMultiplicationServiceTest {
 	}
 
 	@Test
-	public final void testRepeatNSymbolsNewLine() {
-		fail("Not yet implemented"); // TODO
-	}
-
-	@Test
 	public final void testIntermediateMultiplication() {
 		fail("Not yet implemented"); // TODO
 	}
