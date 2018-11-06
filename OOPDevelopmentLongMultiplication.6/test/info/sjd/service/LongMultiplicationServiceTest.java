@@ -29,14 +29,4 @@ public class LongMultiplicationServiceTest {
 		assertEquals("***************", LongMultiplicationService.repeatNSymbols(testNumber, testSymbol));
 	}
 
-	@Test
-	public final void testIntermediateMultiplication() {
-		fail("Not yet implemented"); // TODO
-	}
-
-	@Test
-	public final void testPrintLongMultiplication() {
-		fail("Not yet implemented"); // TODO
-	}
-
 }

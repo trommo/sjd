@@ -8,8 +8,10 @@ public class LongMultiplicationService {
         int longerNumber = 0;
         if (String.valueOf(firstNumber).length() < String.valueOf(secondNumber).length()) {
             longerNumber = secondNumber;
-        } else {
+        } else if (String.valueOf(firstNumber).length() == String.valueOf(secondNumber).length()) {
             longerNumber = firstNumber;
+        } else {
+        	longerNumber = firstNumber;
         }
         return longerNumber;
     }
@@ -17,6 +19,8 @@ public class LongMultiplicationService {
 	public static int findShorterNumber(int firstNumber, int secondNumber) {
 		int shorterNumber = 0;
 		if (String.valueOf(firstNumber).length() > String.valueOf(secondNumber).length()) {
+			shorterNumber = secondNumber;
+		} else if (String.valueOf(firstNumber).length() == String.valueOf(secondNumber).length()) {
 			shorterNumber = secondNumber;
 		} else {
 			shorterNumber = firstNumber;
@@ -34,21 +38,27 @@ public class LongMultiplicationService {
 
     public static void intermediateMultiplication(int firstNumber, int secondNumber) {
         int rightShift = 0;
-        while (secondNumber > 0) {
+        if (secondNumber == 0) {
+        	System.out.println(0);
+        } else if (secondNumber < 10) {
+        	System.out.println(firstNumber * secondNumber);
+        } else {
+        	while (secondNumber > 0) {
             int number = firstNumber * (secondNumber % 10);
             secondNumber /= 10;
             System.out.print(repeatNSymbols(width - rightShift - String.valueOf(number).length(), " "));
             System.out.println(number);
             rightShift++;
-        }
+        	}
         System.out.print(repeatNSymbols(1, " "));
+        }
     }
 
 	static int width = 0;
 	
     public static void printLongMultiplication(int firstNumber, int secondNumber) {
-        width =0;
-        shiftNumber =20;
+        width = 0;
+        shiftNumber = 20;
         System.out.print(repeatNSymbols(shiftNumber, " "));
         System.out.println(String.valueOf(findLongerNumber(firstNumber, secondNumber)));
         width = shiftNumber + String.valueOf(findLongerNumber(firstNumber, secondNumber)).length();
