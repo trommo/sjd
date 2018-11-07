@@ -37,14 +37,19 @@ public class LongMultiplicationService {
 	}
 
     public static void intermediateMultiplication(int firstNumber, int secondNumber) {
+        System.out.print(repeatNSymbols(shiftNumber, " "));
+        System.out.println(repeatNSymbols(String.valueOf(findLongerNumber(firstNumber, secondNumber)).length(), "_"));
         int rightShift = 0;
-        if (secondNumber == 0) {
+        if (findShorterNumber(firstNumber, secondNumber) == 0) {
+            System.out.print(repeatNSymbols(width - rightShift - String.valueOf(0).length(), " "));
         	System.out.println(0);
-        } else if (secondNumber < 10) {
+        } else if (findShorterNumber(firstNumber, secondNumber) < 10) {
+            System.out.print(repeatNSymbols(width - rightShift - String.valueOf(findLongerNumber(firstNumber, secondNumber)).length(), " "));
+
         	System.out.println(firstNumber * secondNumber);
         } else {
-        	while (secondNumber > 0) {
-            int number = firstNumber * (secondNumber % 10);
+        	while (findShorterNumber(firstNumber, secondNumber) > 0) {
+            int number = findLongerNumber(firstNumber, secondNumber) * (findShorterNumber(firstNumber, secondNumber) % 10);
             secondNumber /= 10;
             System.out.print(repeatNSymbols(width - rightShift - String.valueOf(number).length(), " "));
             System.out.println(number);
@@ -67,12 +72,17 @@ public class LongMultiplicationService {
         System.out.print(repeatNSymbols(shiftNumber, " "));
         System.out.print(repeatNSymbols(String.valueOf(findLongerNumber(firstNumber, secondNumber)).length() - String.valueOf(findShorterNumber(firstNumber, secondNumber)).length(), " "));
         System.out.println(String.valueOf(findShorterNumber(firstNumber, secondNumber)));
-        System.out.print(repeatNSymbols(shiftNumber, " "));
-        System.out.println(repeatNSymbols(String.valueOf(findLongerNumber(firstNumber, secondNumber)).length(), "_"));
+
+        if (findShorterNumber(firstNumber, secondNumber) == 0) {
+            intermediateMultiplication(findLongerNumber(firstNumber, secondNumber), findShorterNumber(firstNumber, secondNumber));
+        } else if (findShorterNumber(firstNumber, secondNumber) < 10) {
+            intermediateMultiplication(findLongerNumber(firstNumber, secondNumber), findShorterNumber(firstNumber, secondNumber));
+        } else {
         intermediateMultiplication(findLongerNumber(firstNumber, secondNumber), findShorterNumber(firstNumber, secondNumber));
         System.out.print(repeatNSymbols(width -String.valueOf(String.valueOf(firstNumber * secondNumber)).length() -1, " "));
         System.out.println(repeatNSymbols(String.valueOf(String.valueOf(firstNumber * secondNumber)).length(), "_"));
         System.out.print(repeatNSymbols(width - String.valueOf(firstNumber * secondNumber).length(), " "));
         System.out.println(firstNumber * secondNumber);
+        }
     }
 }

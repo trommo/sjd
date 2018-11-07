@@ -6,6 +6,6 @@ public class LongMultiplication {
 	
 	public static void main(String[] args) {
 
-		LongMultiplicationService.printLongMultiplication(3420, 2700);
+		LongMultiplicationService.printLongMultiplication(22, 112);
 	}
 }
